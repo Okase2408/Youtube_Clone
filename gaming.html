@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Clone</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="left-section">
+            <button class="menu-button"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+                <a href="index.html" class="logo">
+                <span class="youtube-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 7.2 17 12l-8 4.8V7.2z" fill="#ffffff"/></svg>
+                </span>
+                Youtube
+                </a>
+        </div>
+        <div class="search-section">
+            <input type="text" placeholder="Search">
+            <button class="search-button">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </button>
+        </div>
+        <div class="right-section">
+            <button class="mic"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v1a7 7 0 0 0 14 0v-1"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="8" y1="22" x2="16" y2="22"/></svg></button>
+            <button class="create">+ Create</button>
+            <button><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></button>
+            <button class="profile"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><circle cx="12" cy="10.2" r="3.2"/><path d="M6 18.5a6.2 6.2 0 0 1 12 0"/></svg></button>
+        </div>
+    </header>
+
+    <div class="page-container">
+
+        <aside class="sidebar">
+                <nav>
+                <a href="index.html" class="sidebar-link">
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v10h5v-6h2v6h5V10"/></svg></span>
+                    <span>Home</span>
+                </a>
+
+                <a href="shorts.html" class="sidebar-link">
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg></span>
+                    <span>Shorts</span>
+                </a>
+
+                <a href="subscriptions.html" class="sidebar-link">
+                    <span>📺</span>
+                    <span>Subscriptions</span>
+                </a>
+
+                <hr>
+
+                <h3>You</h3>
+
+                <a href="history.html" class="sidebar-link">
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><polyline points="3 3 3 9 9 9"/><polyline points="12 7 12 12 16 14.5"/></svg></span>
+                    <span>History</span>
+                </a>
+
+                <a href="your-videos.html" class="sidebar-link">
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2.5"/><circle cx="12" cy="9.5" r="2.6"/><path d="M6.5 18l3.5-4 2.5 2.5 3-3.5 2.5 5"/></svg></span>
+                    <span>Your videos</span>
+                </a>
+
+                <a href="watch-later.html" class="sidebar-link">
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15.5 14"/></svg></span>
+                    <span>Watch later</span>
+                </a>
+
+                <a href="liked-videos.html" class="sidebar-link">
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 22H4a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1h3"/><path d="M7 11l4-8a2.2 2.2 0 0 1 4 1.4L14 9h5a2 2 0 0 1 2 2.4l-1.7 8A2 2 0 0 1 17.3 21H7z"/></svg></span>
+                    <span>Liked videos</span>
+                </a>
+
+                <hr>
+
+                <h3>Explore</h3>
+
+                <a href="trending.html" class="sidebar-link">
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.5 2c1.2 3-2.1 4.3-2.1 7.3 0 1.6 1 2.4 2 2.4 1.5 0 1.9-1.4 1.6-2.6C16 10.5 17.2 13 17.2 15.4A6 6 0 0 1 6 15.4C6 10.6 9.6 7 12.5 2z"/></svg></span>
+                    <span>Trending</span>
+                </a>
+
+                <a href="music.html" class="sidebar-link">
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6.5" cy="18" r="2.7"/><circle cx="17.5" cy="16" r="2.7"/><path d="M9.2 18V5.2L20.2 3v12.8"/></svg></span>
+                    <span>Music</span>
+                </a>
+
+                <a href="gaming.html" class="sidebar-link active">
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="11" rx="5.5"/><line x1="7" y1="10.3" x2="7" y2="14.7"/><line x1="4.8" y1="12.5" x2="9.2" y2="12.5"/><circle cx="16" cy="11" r="1.1" fill="currentColor" stroke="none"/><circle cx="18.5" cy="13.7" r="1.1" fill="currentColor" stroke="none"/></svg></span>
+                    <span>Gaming</span>
+                </a>
+
+                <a href="sports.html" class="sidebar-link">
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M7 5H4.5A2.5 2.5 0 0 0 7 8.5"/><path d="M17 5h2.5A2.5 2.5 0 0 1 17 8.5"/><line x1="12" y1="14" x2="12" y2="18.5"/><line x1="8.5" y1="21" x2="15.5" y2="21"/><path d="M9.5 21v-2.5h5V21"/></svg></span>
+                    <span>Sports</span>
+                </a>
+
+            </nav>
+
+        </aside>
+
+        <main class="main-content">
+
+            <h1>Gaming</h1>
+
+            <section class="video-grid">
+
+
+                <article class="video-card">
+
+                    <a href="watch.html?v=v29">
+                        <img src="https://img.youtube.com/vi/cT8w3WOzlso/hqdefault.jpg" alt="Video thumbnail">
+                    </a>
+
+                    <h3>Ranked Grind to Diamond - Full Session</h3>
+
+                    <p>ProGamer NG</p>
+
+                    <p>780K views • 1 day ago</p>
+
+                </article>
+
+
+                <article class="video-card">
+
+                    <a href="watch.html?v=v30">
+                        <img src="https://img.youtube.com/vi/cT8w3WOzlso/hqdefault.jpg" alt="Video thumbnail">
+                    </a>
+
+                    <h3>New Game Release First Impressions</h3>
+
+                    <p>GameSpotlight</p>
+
+                    <p>540K views • 2 days ago</p>
+
+                </article>
+
+
+                <article class="video-card">
+
+                    <a href="watch.html?v=v31">
+                        <img src="https://img.youtube.com/vi/cT8w3WOzlso/hqdefault.jpg" alt="Video thumbnail">
+                    </a>
+
+                    <h3>Insane Clutch Moments Compilation</h3>
+
+                    <p>ProGamer NG</p>
+
+                    <p>1.6M views • 4 days ago</p>
+
+                </article>
+
+
+                <article class="video-card">
+
+                    <a href="watch.html?v=v32">
+                        <img src="https://img.youtube.com/vi/cT8w3WOzlso/hqdefault.jpg" alt="Video thumbnail">
+                    </a>
+
+                    <h3>Speedrunning World Record Attempt</h3>
+
+                    <p>SpeedKing</p>
+
+                    <p>920K views • 1 week ago</p>
+
+                </article>
+
+
+                <article class="video-card">
+
+                    <a href="watch.html?v=v33">
+                        <img src="https://img.youtube.com/vi/cT8w3WOzlso/hqdefault.jpg" alt="Video thumbnail">
+                    </a>
+
+                    <h3>Top 10 Games to Play This Year</h3>
+
+                    <p>GameSpotlight</p>
+
+                    <p>650K views • 1 week ago</p>
+
+                </article>
+
+
+                <article class="video-card">
+
+                    <a href="watch.html?v=v34">
+                        <img src="https://img.youtube.com/vi/cT8w3WOzlso/hqdefault.jpg" alt="Video thumbnail">
+                    </a>
+
+                    <h3>Co-op Chaos with Friends</h3>
+
+                    <p>SquadPlays</p>
+
+                    <p>430K views • 2 weeks ago</p>
+
+                </article>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="auth.js"></script>
+
+</body>
+
+</html>
