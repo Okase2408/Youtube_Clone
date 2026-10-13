@@ -1,15 +1,24 @@
 # YouTube Clone
 
-Static, front-end only. Open `index.html` in a browser (or serve the folder).
+A static, front-end YouTube-inspired project built with HTML, CSS, and JavaScript.
 
-- `style.css` – all styling (dark YouTube look, responsive, collapsible sidebar)
-- `auth.js` – demo sign-in, uploads, search, card rendering, watch-page behaviour
-- `videos.js` – the video catalogue. Each entry plays the YouTube clip in `yt`.
+## Features
+- Dark YouTube-inspired interface
+- Responsive layout and collapsible sidebar
+- Demo sign-in
+- Video search and card rendering
+- Watch-page behaviour
+- Video uploads
 
-## Thumbnails
-Every video gets its own generated thumbnail. To use a real image, add a `thumb`
-field to the entry in `videos.js`, e.g. `thumb: "https://…/photo.jpg"`.
+## Project Files
+- `index.html` – homepage
+- `style.css` – styling and responsive layout
+- `auth.js` – demo authentication, uploads, search, and video rendering
 
-## Adding a video to a page
-Pages list videos by id in a `data-ids` attribute, e.g.
-`<section class="video-grid" data-render="grid" data-ids="v01,v02,v03"></section>`.
+## Screenshots
+
+![YouTube Clone Screenshot](https://github.com/user-attachments/assets/f2ee15b3-4736-4712-be52-bd1886a67f13)
+
+![YouTube Clone Screenshot](https://github.com/user-attachments/assets/9c2244c6-8579-49d3-8f71-b1d768cbe478)
+
+![YouTube Clone Screenshot](https://github.com/user-attachments/assets/29bb3332-8eee-4997-84fc-ff086e590cee)

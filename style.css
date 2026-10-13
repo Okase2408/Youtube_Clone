@@ -201,3 +201,172 @@ h2.section-title{font-size:20px;font-weight:700;margin:36px 0 16px;display:flex;
 .right-section {
     gap: 4px;
 }
+
+
+/* ---------- homepage polish ---------- */
+.main-content {
+    flex: 1;
+    min-width: 0;
+    padding: 24px 28px 48px;
+}
+
+.main-content h1 {
+    letter-spacing: -0.35px;
+}
+
+.video-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 34px 18px;
+}
+
+.video-card > a {
+    display: block;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #272727;
+}
+
+.video-card img {
+    transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.video-card > a:hover img {
+    transform: scale(1.035);
+    filter: brightness(1.05);
+}
+
+.video-info {
+    display: grid;
+    grid-template-columns: 38px minmax(0, 1fr) 24px;
+    align-items: start;
+    gap: 12px;
+    padding-top: 12px;
+}
+
+.video-info > div:nth-child(2) {
+    min-width: 0;
+}
+
+.video-info h2 {
+    margin: 0 0 7px;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.video-info p {
+    margin: 3px 0;
+    color: #aaa;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.video-info p:first-of-type:hover {
+    color: #f1f1f1;
+}
+
+.video-info .channel-image {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+    background: #303030;
+}
+
+.more-button {
+    font-size: 20px;
+    line-height: 1;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+}
+
+.more-button:hover,
+.right-section button:hover,
+.menu-button:hover {
+    background: #272727;
+    border-radius: 50%;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.section-heading h1 {
+    margin: 0;
+}
+
+.section-heading a {
+    color: #aaa;
+    font-size: 14px;
+}
+
+.section-heading a:hover {
+    color: #fff;
+}
+
+.short-card h2 {
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 9px 0 5px;
+}
+
+@media (min-width: 1500px) {
+    .video-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 1100px) {
+    .main-content {
+        padding: 22px 18px 40px;
+    }
+
+    .video-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+    .main-content {
+        padding: 18px 12px 32px;
+    }
+
+    .video-grid {
+        grid-template-columns: 1fr;
+        gap: 26px;
+    }
+
+    .video-card img {
+        border-radius: 10px;
+    }
+
+    .video-info h2 {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-content {
+        padding: 16px 10px 28px;
+    }
+
+    .video-info {
+        grid-template-columns: 34px minmax(0, 1fr) 22px;
+        gap: 9px;
+    }
+
+    .video-info .channel-image {
+        width: 32px;
+        height: 32px;
+    }
+}
+
