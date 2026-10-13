@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTube Clone</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Search - YouTube</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header">
+<header class="header">
         <div class="left-section">
             <button class="menu-button"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
                 <a href="index.html" class="logo">
                 <span class="youtube-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 7.2 17 12l-8 4.8V7.2z" fill="#ffffff"/></svg>
                 </span>
-                Youtube
+                YouTube
                 </a>
         </div>
         <div class="search-section">
@@ -28,16 +27,13 @@
         </div>
         <div class="right-section">
             <button class="mic"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v1a7 7 0 0 0 14 0v-1"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="8" y1="22" x2="16" y2="22"/></svg></button>
-            <button class="create">+ Create</button>
+            <button class="create"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg><span>Create</span></button>
             <button><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></button>
             <button class="profile"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><circle cx="12" cy="10.2" r="3.2"/><path d="M6 18.5a6.2 6.2 0 0 1 12 0"/></svg></button>
         </div>
     </header>
-
-    <div class="page-container">
-
-        <aside class="sidebar">
-                <nav>
+<div class="page-container">
+<aside class="sidebar"><nav>
                 <a href="index.html" class="sidebar-link">
                     <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v10h5v-6h2v6h5V10"/></svg></span>
                     <span>Home</span>
@@ -49,7 +45,7 @@
                 </a>
 
                 <a href="subscriptions.html" class="sidebar-link">
-                    <span>📺</span>
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2.5"/><path d="M7 3.5h10"/><path d="M10.5 11v5l4-2.5z" fill="currentColor"/></svg></span>
                     <span>Subscriptions</span>
                 </a>
 
@@ -101,68 +97,17 @@
                     <span>Sports</span>
                 </a>
 
-            </nav>
-
-        </aside>
-         <main class="main-content">
-
-            <h1 id="search-heading">Search Results</h1>
-
-            <section class="search-results" id="search-results"></section>
-
-        </main>
-
-    </div>
-
-    <script src="videos.js"></script>
-    <script src="auth.js"></script>
-    <script>
-        (function () {
-            var params = new URLSearchParams(window.location.search);
-            var q = (params.get("q") || "").trim();
-            var heading = document.getElementById("search-heading");
-            var results = document.getElementById("search-results");
-
-            if (!q) {
-                heading.textContent = "Search";
-                results.innerHTML = '<p class="search-empty">Type something into the search bar above to look through the catalog.</p>';
-                return;
-            }
-
-            heading.textContent = 'Results for “' + q + '”';
-
-            var needle = q.toLowerCase();
-            var matches = Object.keys(VIDEOS).filter(function (key) {
-                var v = VIDEOS[key];
-                return v.title.toLowerCase().indexOf(needle) !== -1 ||
-                       v.channel.toLowerCase().indexOf(needle) !== -1;
-            });
-
-            if (!matches.length) {
-                results.innerHTML = '<p class="search-empty">No videos found for “' + q + '”.</p>';
-                return;
-            }
-
-            results.innerHTML = matches.map(function (key) {
-                var v = VIDEOS[key];
-                return (
-                    '<article class="search-card">' +
-                        '<a href="watch.html?v=' + key + '">' +
-                            '<img src="https://img.youtube.com/vi/' + v.yt + '/hqdefault.jpg" alt="Video thumbnail">' +
-                        '</a>' +
-                        '<div class="search-info">' +
-                            '<h2>' + v.title + '</h2>' +
-                            '<p>' + v.views + ' • ' + v.uploaded + '</p>' +
-                            '<p>' + v.channel + ' • ' + v.subs + '</p>' +
-                            '<p>' + v.description + '</p>' +
-                        '</div>' +
-                        '<button>⋮</button>' +
-                    '</article>'
-                );
-            }).join("");
-        })();
-    </script>
-
+            </nav></aside>
+<main class="main-content"><h1 id="search-heading">Search results</h1><section class="row-list" id="search-results"></section></main>
+</div>
+<script src="videos.js"></script>
+<script src="auth.js"></script>
+<script>
+(function(){var q=(new URLSearchParams(location.search).get("q")||"").trim(),h=document.getElementById("search-heading"),r=document.getElementById("search-results");
+if(!q){h.textContent="Search";r.innerHTML='<p class="empty"><b>What do you want to watch?</b>Type a title or channel in the search bar above.</p>';return}
+h.textContent="Results for \u201c"+q+"\u201d";var n=q.toLowerCase();
+var m=Object.keys(VIDEOS).filter(function(k){var v=VIDEOS[k];return k.charAt(0)==="v"&&(v.title.toLowerCase().indexOf(n)>-1||v.channel.toLowerCase().indexOf(n)>-1||v.description.toLowerCase().indexOf(n)>-1)});
+r.innerHTML=m.length?m.map(function(k){return YT.row(k,{desc:true})}).join(""):'<p class="empty"><b>No results for \u201c'+YT.esc(q)+'\u201d</b>Check your spelling or try a different keyword.</p>'})();
+</script>
 </body>
-
 </html>

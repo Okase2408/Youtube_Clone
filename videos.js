@@ -1,10 +1,6 @@
-// Shared video data for the watch page.
-// Each entry: title, channel, initial (avatar letter), yt (real YouTube video id
-// used both to embed the player and to fetch a matching thumbnail),
-// views (e.g. "120K views"), uploaded (e.g. "2 hours ago"), subs, description.
+
 
 const VIDEOS = {
-  // "Franchise" videos shared across channel/history/search/subscriptions/watch
   v01: { title: "My New Video You Don't Want to Miss", channel: "Creator One", initial: "C", yt: "aqz-KE-bpKQ", views: "120K views", uploaded: "2 hours ago", subs: "500K subscribers", description: "This is the description for the video. Welcome to the channel! Don't forget to like, share and subscribe for more videos." },
   v02: { title: "Everything You Need to Know", channel: "Creator Two", initial: "C", yt: "H14bBuluwB8", views: "85K views", uploaded: "5 hours ago", subs: "300K subscribers", description: "Here is everything you need to know about this interesting topic." },
   v03: { title: "A Day in My Life", channel: "Creator Three", initial: "C", yt: "aqz-KE-bpKQ", views: "210K views", uploaded: "1 day ago", subs: "700K subscribers", description: "Come along with me as I show you what a typical day in my life looks like." },
@@ -12,7 +8,7 @@ const VIDEOS = {
   v05: { title: "Testing Viral Internet Hacks", channel: "Creator Five", initial: "C", yt: "_OBlgSz8sSM", views: "560K views", uploaded: "2 days ago", subs: "900K subscribers", description: "Today we are testing some of the most popular internet hacks." },
   v06: { title: "Our Biggest Adventure Yet", channel: "Creator Six", initial: "C", yt: "aqz-KE-bpKQ", views: "190K views", uploaded: "3 days ago", subs: "620K subscribers", description: "Join us on our biggest adventure yet, full of surprises along the way." },
 
-  // Home feed (index.html)
+  
   v07: { title: "How to Build a Website from Scratch", channel: "CodeWithKase", initial: "K", yt: "mU6anWqZJcc", views: "125K views", uploaded: "2 days ago", subs: "410K subscribers", description: "A beginner-friendly walkthrough on building a website from the ground up." },
   v08: { title: "The Future of Technology", channel: "TechTalks", initial: "T", yt: "mU6anWqZJcc", views: "342K views", uploaded: "4 days ago", subs: "1.2M subscribers", description: "Exploring what the next decade of technology might look like." },
   v09: { title: "Study Tips Every Student Should Know", channel: "Student Success", initial: "S", yt: "H14bBuluwB8", views: "510K views", uploaded: "6 days ago", subs: "890K subscribers", description: "Practical study tips to help you retain more and stress less." },
@@ -64,14 +60,14 @@ const VIDEOS = {
   v45: { title: "Reacting to My First Ever Video", channel: "Your Channel", initial: "Y", yt: "_OBlgSz8sSM", views: "97K views", uploaded: "1 month ago", subs: "500K subscribers", description: "Reacting to the very first video I ever uploaded." },
   v46: { title: "How I Plan My Content Calendar", channel: "Your Channel", initial: "Y", yt: "H14bBuluwB8", views: "29K views", uploaded: "1 month ago", subs: "500K subscribers", description: "How I plan, batch and schedule content each month." },
 
-  // Shorts (index.html home feed)
+  // Shorts
   s01: { title: "Study motivation", channel: "StudyDaily", initial: "S", yt: "H14bBuluwB8", views: "1.2M views", uploaded: "1 day ago", subs: "410K subscribers", description: "Quick motivation to get through your next study session." },
   s02: { title: "Web development tips", channel: "DevBytes", initial: "D", yt: "mU6anWqZJcc", views: "850K views", uploaded: "2 days ago", subs: "320K subscribers", description: "A quick web development tip you can use today." },
   s03: { title: "Funny student moments", channel: "CampusLaughs", initial: "C", yt: "_OBlgSz8sSM", views: "2.1M views", uploaded: "3 days ago", subs: "1.1M subscribers", description: "Relatable, funny moments from student life." },
   s04: { title: "Quick cooking recipe", channel: "QuickBites", initial: "Q", yt: "_Wk8wb9-6JI", views: "760K views", uploaded: "4 days ago", subs: "540K subscribers", description: "A quick recipe you can make in minutes." },
   s05: { title: "Programming hack", channel: "CodeHacks", initial: "C", yt: "mU6anWqZJcc", views: "540K views", uploaded: "5 days ago", subs: "290K subscribers", description: "A small programming trick that saves real time." },
 
-  // Shorts (shorts.html)
+  // Shorts
   s06: { title: "Funny moments you need to see \uD83D\uDE02", channel: "CreatorOne", initial: "C", yt: "_OBlgSz8sSM", views: "1.2M views", uploaded: "1 day ago", subs: "500K subscribers", description: "Some of the funniest moments from this week." },
   s07: { title: "This was actually amazing \uD83E\uDD2F", channel: "CreatorTwo", initial: "C", yt: "aqz-KE-bpKQ", views: "850K views", uploaded: "2 days ago", subs: "300K subscribers", description: "This genuinely surprised everyone who watched it." },
   s08: { title: "You won't believe what happened \uD83D\uDE2D", channel: "CreatorThree", initial: "C", yt: "_OBlgSz8sSM", views: "2.4M views", uploaded: "3 days ago", subs: "700K subscribers", description: "Nobody expected this to happen." },

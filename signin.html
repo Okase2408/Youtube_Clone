@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign in - YouTube Clone</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign in - YouTube</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header">
+<header class="header">
         <div class="left-section">
             <button class="menu-button"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
                 <a href="index.html" class="logo">
                 <span class="youtube-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 7.2 17 12l-8 4.8V7.2z" fill="#ffffff"/></svg>
                 </span>
-                Youtube
+                YouTube
                 </a>
         </div>
         <div class="search-section">
@@ -28,16 +27,13 @@
         </div>
         <div class="right-section">
             <button class="mic"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v1a7 7 0 0 0 14 0v-1"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="8" y1="22" x2="16" y2="22"/></svg></button>
-            <button class="create">+ Create</button>
+            <button class="create"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg><span>Create</span></button>
             <button><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></button>
             <button class="profile"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><circle cx="12" cy="10.2" r="3.2"/><path d="M6 18.5a6.2 6.2 0 0 1 12 0"/></svg></button>
         </div>
     </header>
-
-    <div class="page-container">
-
-        <aside class="sidebar">
-                <nav>
+<div class="page-container">
+<aside class="sidebar"><nav>
                 <a href="index.html" class="sidebar-link">
                     <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v10h5v-6h2v6h5V10"/></svg></span>
                     <span>Home</span>
@@ -49,7 +45,7 @@
                 </a>
 
                 <a href="subscriptions.html" class="sidebar-link">
-                    <span>📺</span>
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2.5"/><path d="M7 3.5h10"/><path d="M10.5 11v5l4-2.5z" fill="currentColor"/></svg></span>
                     <span>Subscriptions</span>
                 </a>
 
@@ -101,69 +97,19 @@
                     <span>Sports</span>
                 </a>
 
-            </nav>
-
-        </aside>
-
-        
-        <main class="main-content">
-
-            <div class="signin-page">
-
-                <div class="signin-card">
-
-                    <span class="youtube-icon signin-logo"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 7.2 17 12l-8 4.8V7.2z" fill="#ffffff"/></svg></span>
-
-                    <h1>Sign in</h1>
-                    <p class="signin-subtitle">
-                        Demo sign-in &mdash; any name works, nothing is checked against a
-                        real account. It's remembered on this browser only.
-                    </p>
-
-                    <form id="signin-form" class="signin-form">
-
-                        <label for="signin-name">Name</label>
-                        <input type="text" id="signin-name" placeholder="e.g. Ada" required maxlength="40">
-
-                        <label for="signin-email">Email <span class="optional">(optional)</span></label>
-                        <input type="email" id="signin-email" placeholder="you@example.com">
-
-                        <button type="submit" class="signin-submit">Sign in</button>
-
-                    </form>
-
-                </div>
-
-            </div>
-
-        </main>
-
-    </div>
-
-    <script src="auth.js"></script>
-    <script>
-        (function () {
-            var params = new URLSearchParams(window.location.search);
-            var next = params.get("next") || "index.html";
-
-            var existing = window.YTAuth && window.YTAuth.getUser();
-            if (existing) {
-                window.location.href = next;
-                return;
-            }
-
-            document.getElementById("signin-form").addEventListener("submit", function (e) {
-                e.preventDefault();
-                var name = document.getElementById("signin-name").value.trim();
-                if (!name) return;
-                var email = document.getElementById("signin-email").value.trim();
-
-                window.YTAuth.setUser({ name: name, email: email });
-                window.location.href = next;
-            });
-        })();
-    </script>
-
+            </nav></aside>
+<main class="main-content"><div class="signin-page"><div class="signin-card"><span class="youtube-icon signin-logo"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 7.2 17 12l-8 4.8V7.2z" fill="#fff"/></svg></span>
+<h1>Sign in</h1><p class="signin-subtitle">Pick any name to get started. This is a demo, so nothing is checked and your details stay in this browser.</p>
+<form id="signin-form" class="signin-form"><label for="signin-name">Name</label><input type="text" id="signin-name" placeholder="e.g. Ada" required maxlength="40" autofocus>
+<label for="signin-email">Email <span class="optional">(optional)</span></label><input type="email" id="signin-email" placeholder="you@example.com"><button type="submit" class="signin-submit">Sign in</button></form></div></div></main>
+</div>
+<script src="videos.js"></script>
+<script src="auth.js"></script>
+<script>
+(function(){var next=new URLSearchParams(location.search).get("next")||"index.html";
+if(YTAuth.getUser()){location.href=next;return}
+document.getElementById("signin-form").addEventListener("submit",function(e){e.preventDefault();var n=document.getElementById("signin-name").value.trim();if(!n)return;
+YTAuth.setUser({name:n,email:document.getElementById("signin-email").value.trim()});location.href=next})})();
+</script>
 </body>
-
 </html>

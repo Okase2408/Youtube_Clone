@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upload a video - YouTube Clone</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Upload a video - YouTube</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header">
+<header class="header">
         <div class="left-section">
             <button class="menu-button"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
                 <a href="index.html" class="logo">
                 <span class="youtube-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 7.2 17 12l-8 4.8V7.2z" fill="#ffffff"/></svg>
                 </span>
-                Youtube
+                YouTube
                 </a>
         </div>
         <div class="search-section">
@@ -28,16 +27,13 @@
         </div>
         <div class="right-section">
             <button class="mic"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v1a7 7 0 0 0 14 0v-1"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="8" y1="22" x2="16" y2="22"/></svg></button>
-            <button class="create">+ Create</button>
+            <button class="create"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg><span>Create</span></button>
             <button><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></button>
             <button class="profile"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><circle cx="12" cy="10.2" r="3.2"/><path d="M6 18.5a6.2 6.2 0 0 1 12 0"/></svg></button>
         </div>
     </header>
-
-    <div class="page-container">
-
-        <aside class="sidebar">
-                <nav>
+<div class="page-container">
+<aside class="sidebar"><nav>
                 <a href="index.html" class="sidebar-link">
                     <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v10h5v-6h2v6h5V10"/></svg></span>
                     <span>Home</span>
@@ -49,7 +45,7 @@
                 </a>
 
                 <a href="subscriptions.html" class="sidebar-link">
-                    <span>📺</span>
+                    <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2.5"/><path d="M7 3.5h10"/><path d="M10.5 11v5l4-2.5z" fill="currentColor"/></svg></span>
                     <span>Subscriptions</span>
                 </a>
 
@@ -101,101 +97,101 @@
                     <span>Sports</span>
                 </a>
 
-            </nav>
-
-        </aside>
-
-        
-        <main class="main-content">
-
-            <div class="create-page">
-
-                <h1>Upload video</h1>
-                <p class="create-subtitle">
-                    This is a demo upload &mdash; there's no server behind it, so nothing
-                    actually leaves your browser. Your title and thumbnail are real and
-                    will show up in <a href="your-videos.html">Your videos</a>; playback
-                    uses a stand-in clip since there's nowhere to actually store a video file.
-                </p>
-
-                <form class="create-form" id="create-form">
-
-                    <label for="create-title">Title</label>
-                    <input type="text" id="create-title" placeholder="Add a title that describes your video" required maxlength="100">
-
-                    <label for="create-description">Description</label>
-                    <textarea id="create-description" rows="4" placeholder="Tell viewers about your video"></textarea>
-
-                    <label for="create-thumb">Thumbnail</label>
-                    <input type="file" id="create-thumb" accept="image/*">
-                    <div class="thumb-preview" id="thumb-preview">
-                        <span>No thumbnail selected</span>
-                    </div>
-
-                    <div class="create-actions">
-                        <a href="your-videos.html" class="create-cancel">Cancel</a>
-                        <button type="submit" class="create-publish">Publish</button>
-                    </div>
-
-                </form>
-
-            </div>
-
-        </main>
-
-    </div>
-
-    <script src="videos.js"></script>
-    <script src="auth.js"></script>
-    <script>
-        (function () {
-            var user = window.YTAuth && window.YTAuth.getUser();
-            if (!user) {
-                window.location.href = "signin.html?next=create.html";
-                return;
-            }
-
-            var thumbDataUrl = null;
-            var fileInput = document.getElementById("create-thumb");
-            var preview = document.getElementById("thumb-preview");
-
-            fileInput.addEventListener("change", function () {
-                var file = fileInput.files[0];
-                if (!file) return;
-                var reader = new FileReader();
-                reader.onload = function (e) {
-                    thumbDataUrl = e.target.result;
-                    preview.innerHTML = '<img src="' + thumbDataUrl + '" alt="Thumbnail preview">';
-                };
-                reader.readAsDataURL(file);
-            });
-
-            document.getElementById("create-form").addEventListener("submit", function (e) {
-                e.preventDefault();
-                var title = document.getElementById("create-title").value.trim();
-                if (!title) return;
-                var description = document.getElementById("create-description").value.trim() ||
-                    "No description provided.";
-
-                var video = {
-                    id: "u" + Date.now(),
-                    title: title,
-                    channel: "Your Channel",
-                    initial: "Y",
-                    yt: "aqz-KE-bpKQ",
-                    views: "0 views",
-                    uploaded: "Just now",
-                    subs: "500K subscribers",
-                    description: description,
-                    thumb: thumbDataUrl || "https://img.youtube.com/vi/aqz-KE-bpKQ/hqdefault.jpg"
-                };
-
-                window.YTAuth.addUpload(video);
-                window.location.href = "your-videos.html";
-            });
-        })();
-    </script>
+            </nav></aside>
+<main class="main-content"><div class="create-page"><h1>Upload video</h1>
+<p class="create-subtitle">This is a demo upload: nothing leaves your browser. Your title and thumbnail show up in <a href="your-videos.html">Your videos</a>, and playback uses a stand-in clip.</p>
+<form class="create-form" id="create-form"><label for="create-title">Title</label><input type="text" id="create-title" placeholder="Add a title that describes your video" required maxlength="100">
+<label for="create-description">Description</label><textarea id="create-description" rows="4" placeholder="Tell viewers about your video"></textarea>
+<label for="create-thumb">Thumbnail <span class="optional">(optional)</span></label><input type="file" id="create-thumb" accept="image/*"><div class="thumb-preview" id="thumb-preview"><span>No thumbnail selected</span></div>
+<div class="create-actions"><a href="your-videos.html" class="create-cancel">Cancel</a><button type="submit" class="create-publish">Publish</button></div></form></div></main>
+</div>
+<script src="videos.js"></script>
+<script src="auth.js"></script>
 
 </body>
-
 </html>
+<script>
+(function () {
+    if (!YTAuth.getUser()) {
+        location.href = "signin.html?next=create.html";
+        return;
+    }
+
+    var form = document.getElementById("create-form");
+    var thumbnailInput = document.getElementById("create-thumb");
+    var thumbnailPreview = document.getElementById("thumb-preview");
+    var thumbnail = "";
+
+    thumbnailInput.addEventListener("change", function () {
+        var file = thumbnailInput.files[0];
+
+        if (!file) {
+            thumbnail = "";
+            thumbnailPreview.innerHTML = "<span>No thumbnail selected</span>";
+            return;
+        }
+
+        if (!file.type.startsWith("image/")) {
+            alert("Please select an image file.");
+            thumbnailInput.value = "";
+            thumbnail = "";
+            thumbnailPreview.innerHTML = "<span>No thumbnail selected</span>";
+            return;
+        }
+
+        var reader = new FileReader();
+
+        reader.onload = function (event) {
+            thumbnail = event.target.result;
+            thumbnailPreview.innerHTML = "";
+
+            var image = document.createElement("img");
+            image.src = thumbnail;
+            image.alt = "Thumbnail preview";
+
+            thumbnailPreview.appendChild(image);
+        };
+
+        reader.onerror = function () {
+            alert("Could not read the image. Please try another one.");
+        };
+
+        reader.readAsDataURL(file);
+    });
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        var title = document.getElementById("create-title").value.trim();
+        var description = document.getElementById("create-description").value.trim();
+
+        if (!title) {
+            alert("Please enter a video title.");
+            return;
+        }
+
+        try {
+            YTAuth.addUpload({
+                id: "u" + Date.now(),
+                title: title,
+                channel: "Your Channel",
+                initial: "Y",
+                yt: "aqz-KE-bpKQ",
+                views: "0 views",
+                uploaded: "Just now",
+                subs: "500K subscribers",
+                description: description || "No description provided.",
+                thumb: thumbnail
+            });
+
+            location.href = "your-videos.html";
+      } catch (error) {
+    console.error("Upload error:", error);
+    alert("Upload failed: " + error.message);
+}
+    });
+})();
+</script>
+</body>
+</html>
+
