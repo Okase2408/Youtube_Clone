@@ -106,10 +106,38 @@
 <script src="videos.js"></script>
 <script src="auth.js"></script>
 <script>
-(function(){var next=new URLSearchParams(location.search).get("next")||"index.html";
-if(YTAuth.getUser()){location.href=next;return}
-document.getElementById("signin-form").addEventListener("submit",function(e){e.preventDefault();var n=document.getElementById("signin-name").value.trim();if(!n)return;
-YTAuth.setUser({name:n,email:document.getElementById("signin-email").value.trim()});location.href=next})})();
+(function () {
+    var params = new URLSearchParams(location.search);
+    var next = params.get("next") || "index.html";
+
+    // Only allow simple local HTML page names.
+    if (!/^[a-zA-Z0-9_-]+\.html$/.test(next)) {
+        next = "index.html";
+    }
+
+    if (YTAuth.getUser()) {
+        location.replace(next);
+        return;
+    }
+
+    document.getElementById("signin-form")
+        .addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            var name = document.getElementById("signin-name")
+                .value.trim();
+
+            if (!name) return;
+
+            YTAuth.setUser({
+                name: name,
+                email: document.getElementById("signin-email")
+                    .value.trim()
+            });
+
+            location.href = next;
+        });
+})();
 </script>
 </body>
 </html>
