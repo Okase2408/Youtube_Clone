@@ -89,19 +89,13 @@
         return video || getUploadById(id);
     }
 
-  
 function thumbSrc(id, video, tall) {
-  
-    if (video.thumb) {
-        return video.thumb;
-    }
-
- 
     var width = tall ? 360 : 640;
     var height = tall ? 640 : 360;
 
-    return "https://picsum.photos/seed/ytclone-" +
-        encodeURIComponent(id) + "/" + width + "/" + height;
+    return "https://picsum.photos/seed/" +
+        encodeURIComponent(id) +
+        "/" + width + "/" + height;
 }
 
 
