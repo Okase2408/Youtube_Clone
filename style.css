@@ -370,3 +370,56 @@ h2.section-title{font-size:20px;font-weight:700;margin:36px 0 16px;display:flex;
     }
 }
 
+/* Mobile header fixes */
+@media (max-width: 600px) {
+    .header {
+        padding: 0 8px;
+        gap: 6px;
+    }
+
+    .left-section {
+        min-width: auto;
+        gap: 8px;
+    }
+
+    .logo {
+        max-width: 95px;
+    }
+
+    .search-section {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .search-section input {
+        min-width: 0;
+        padding: 0 10px;
+        font-size: 13px;
+    }
+
+    .right-section {
+        min-width: auto;
+        gap: 4px;
+    }
+
+    .create {
+        display: none;
+    }
+}
+
+@media (max-width: 390px) {
+    .logo {
+        max-width: 78px;
+    }
+
+    .menu-button {
+        width: 32px;
+        height: 32px;
+    }
+
+    .right-section .profile {
+        width: 32px;
+        height: 32px;
+    }
+}
+
