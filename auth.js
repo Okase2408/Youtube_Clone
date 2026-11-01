@@ -89,21 +89,21 @@
         return video || getUploadById(id);
     }
 
-    function thumbSrc(id, video, tall) {
-        if (video.thumb) {
-            return video.thumb;
-        }
-
-        if (video.yt) {
-            return "https://i.ytimg.com/vi/" + encodeURIComponent(video.yt) + "/hqdefault.jpg";
-        }
-
-        var width = tall ? 360 : 640;
-        var height = tall ? 640 : 360;
-        var title = encodeURIComponent(video.title || "Video");
-
-        return "https://placehold.co/" + width + "x" + height + "?text=" + title;
+  
+function thumbSrc(id, video, tall) {
+  
+    if (video.thumb) {
+        return video.thumb;
     }
+
+ 
+    var width = tall ? 360 : 640;
+    var height = tall ? 640 : 360;
+
+    return "https://picsum.photos/seed/ytclone-" +
+        encodeURIComponent(id) + "/" + width + "/" + height;
+}
+
 
     function duration(id) {
         var number = hash(id + "d");
