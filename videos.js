@@ -1,7 +1,16 @@
 
 
 const VIDEOS = {
-  v01: { title: "My New Video You Don't Want to Miss", channel: "Creator One", initial: "C", yt: "aqz-KE-bpKQ", views: "120K views", uploaded: "2 hours ago", subs: "500K subscribers", description: "This is the description for the video. Welcome to the channel! Don't forget to like, share and subscribe for more videos." },
+  v01: {
+    title: "HTML & CSS Beginner Tutorial",
+    channel: "Learn Skills Daily",
+    initial: "L",
+    yt: "2n1zXN7Xdo0",
+    views: "3.7K views",
+    uploaded: "5 months ago",
+    subs: "1.08M subscribers",
+    description: "A beginner-friendly introduction to HTML, CSS and how websites work."
+},
   v02: { title: "Everything You Need to Know", channel: "Creator Two", initial: "C", yt: "H14bBuluwB8", views: "85K views", uploaded: "5 hours ago", subs: "300K subscribers", description: "Here is everything you need to know about this interesting topic." },
   v03: { title: "A Day in My Life", channel: "Creator Three", initial: "C", yt: "aqz-KE-bpKQ", views: "210K views", uploaded: "1 day ago", subs: "700K subscribers", description: "Come along with me as I show you what a typical day in my life looks like." },
   v04: { title: "Things I Wish I Knew Earlier", channel: "Creator Four", initial: "C", yt: "H14bBuluwB8", views: "340K views", uploaded: "1 day ago", subs: "450K subscribers", description: "These are some important lessons that I wish I had learned earlier." },
@@ -9,10 +18,28 @@ const VIDEOS = {
   v06: { title: "Our Biggest Adventure Yet", channel: "Creator Six", initial: "C", yt: "aqz-KE-bpKQ", views: "190K views", uploaded: "3 days ago", subs: "620K subscribers", description: "Join us on our biggest adventure yet, full of surprises along the way." },
 
   
-  v07: { title: "How to Build a Website from Scratch", channel: "CodeWithKase", initial: "K", yt: "mU6anWqZJcc", views: "125K views", uploaded: "2 days ago", subs: "410K subscribers", description: "A beginner-friendly walkthrough on building a website from the ground up." },
+ v07: {
+    title: "Web Development with HTML & CSS – Full Course for Beginners",
+    channel: "freeCodeCamp.org",
+    initial: "F",
+    yt: "dX8396ZmSPk",
+    views: "656K views",
+    uploaded: "3 years ago",
+    subs: "11.9M subscribers",
+    description: "A complete introduction to web development, including HTML, CSS, responsive design and GitHub."
+},
   v08: { title: "The Future of Technology", channel: "TechTalks", initial: "T", yt: "mU6anWqZJcc", views: "342K views", uploaded: "4 days ago", subs: "1.2M subscribers", description: "Exploring what the next decade of technology might look like." },
   v09: { title: "Study Tips Every Student Should Know", channel: "Student Success", initial: "S", yt: "H14bBuluwB8", views: "510K views", uploaded: "6 days ago", subs: "890K subscribers", description: "Practical study tips to help you retain more and stress less." },
-  v10: { title: "Easy Nigerian Recipes You Need to Try", channel: "Foodie Nigeria", initial: "F", yt: "_Wk8wb9-6JI", views: "278K views", uploaded: "1 week ago", subs: "670K subscribers", description: "Simple, delicious Nigerian recipes you can make at home." },
+ v10: {
+    title: "You Will Love This Easy Nigerian Dinner Recipe",
+    channel: "Ify's Kitchen",
+    initial: "I",
+    yt: "hkc2LrJZ4L8",
+    views: "41K views",
+    uploaded: "2 years ago",
+    subs: "858K subscribers",
+    description: "Learn how to prepare delicious Nigerian turmeric fried yam and egg stew."
+},
   v11: { title: "Beginner Friendly Web Development Tutorial", channel: "Code Academy", initial: "C", yt: "mU6anWqZJcc", views: "195K views", uploaded: "1 week ago", subs: "520K subscribers", description: "Start your web development journey with this beginner tutorial." },
   v12: { title: "How to Get First Class in University", channel: "Academic Success", initial: "A", yt: "H14bBuluwB8", views: "412K views", uploaded: "1 week ago", subs: "980K subscribers", description: "Study strategies and habits that can help you graduate with first class." },
   v13: { title: "10 Movies You Should Watch This Year", channel: "Movie Buzz", initial: "M", yt: "aqz-KE-bpKQ", views: "236K views", uploaded: "2 weeks ago", subs: "760K subscribers", description: "Our picks for the ten best movies to watch this year." },
@@ -45,7 +72,16 @@ const VIDEOS = {
   v34: { title: "Co-op Chaos with Friends", channel: "SquadPlays", initial: "S", yt: "cT8w3WOzlso", views: "430K views", uploaded: "2 weeks ago", subs: "540K subscribers", description: "Chaotic co-op gameplay with the squad." },
 
   // Sports
-  v35: { title: "Match Highlights: Weekend Recap", channel: "SportsCenter NG", initial: "S", yt: "wz1r_VJaJZw", views: "980K views", uploaded: "8 hours ago", subs: "2.3M subscribers", description: "All the highlights from the weekend's matches." },
+ v35: {
+    title: "Premier League 2024/25 Season Highlights",
+    channel: "Premier League",
+    initial: "P",
+    yt: "3QV4AD7YF-4",
+    views: "338K views",
+    uploaded: "1 year ago",
+    subs: "10.1M subscribers",
+    description: "Enjoy highlights from some of the best matches of the 2024/25 Premier League season."
+},
   v36: { title: "Top 10 Goals of the Season", channel: "Football Weekly", initial: "F", yt: "wz1r_VJaJZw", views: "1.3M views", uploaded: "1 day ago", subs: "1.9M subscribers", description: "Counting down the best ten goals of the season so far." },
   v37: { title: "Post-Match Press Conference", channel: "SportsCenter NG", initial: "S", yt: "wz1r_VJaJZw", views: "310K views", uploaded: "1 day ago", subs: "2.3M subscribers", description: "The full post-match press conference." },
   v38: { title: "Training Ground Exclusive", channel: "Athlete Life", initial: "A", yt: "wz1r_VJaJZw", views: "255K views", uploaded: "3 days ago", subs: "870K subscribers", description: "Exclusive access to the training ground ahead of the big match." },
